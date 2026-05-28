@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Audio Player</h1>
+
+        <div class="controls">
+            <label for="audio-select">Select Audio:</label>
+            <select id="audio-select">
+                <!-- Audio options will be populated by JavaScript -->
+                <option value="">--Please choose an audio file--</option>
+            </select>
+
+            <label for="play-count">Play Count:</label>
+            <input type="number" id="play-count" value="1" min="1">
+
+            <button id="play-button">Play Selected Audio</button>
+        </div>
+
+        <div class="player">
+            <audio id="audio-player" controls></audio>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
