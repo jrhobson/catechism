@@ -10,21 +10,20 @@
     <div class="container">
         <h1>Interactive Audio Player</h1>
 
-        <div class="controls">
-            <label for="audio-select">Select Audio:</label>
-            <select id="audio-select">
-                <!-- Audio options will be populated by JavaScript -->
-                <option value="">--Please choose an audio file--</option>
-            </select>
+        <div class="player">
+            <audio id="audio-player" controls></audio>
+            <div id="now-playing"></div>
+        </div>
 
+        <div class="controls">
             <label for="play-count">Play Count:</label>
             <input type="number" id="play-count" value="1" min="1">
 
             <button id="play-button">Play Selected Audio</button>
         </div>
 
-        <div class="player">
-            <audio id="audio-player" controls></audio>
+        <div id="audio-checkboxes">
+            <!-- Checkboxes will be populated by JavaScript -->
         </div>
     </div>
 

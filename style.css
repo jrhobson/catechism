@@ -16,7 +16,15 @@ body {
     text-align: center;
 }
 
-.controls label, .controls select, .controls input, .controls button {
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.controls label, .controls input[type="number"], .controls button {
     margin: 10px 5px;
     padding: 8px;
     border-radius: 4px;
@@ -32,6 +40,48 @@ body {
 
 .controls button:hover {
     background-color: #0056b3;
+}
+
+#audio-checkboxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+}
+
+.audio-checkbox-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.audio-checkbox-item:hover {
+    background-color: #e9e9e9;
+}
+
+.audio-checkbox-item input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.audio-checkbox-item label {
+    flex-grow: 1;
+    cursor: pointer;
+    margin: 0; /* Override default label margin */
+}
+
+#now-playing {
+    margin-top: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
 }
 
 .player audio {
