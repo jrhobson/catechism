@@ -42,6 +42,14 @@ body {
     background-color: #0056b3;
 }
 
+#cancel-button {
+    background-color: #dc3545; /* Red color for cancel */
+}
+
+#cancel-button:hover {
+    background-color: #c82333;
+}
+
 #audio-checkboxes {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));

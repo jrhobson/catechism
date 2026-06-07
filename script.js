@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const audioCheckboxesContainer = document.getElementById('audio-checkboxes');
     const playCountInput = document.getElementById('play-count');
     const playButton = document.getElementById('play-button');
+    const cancelButton = document.getElementById('cancel-button');
     const audioPlayer = document.getElementById('audio-player');
     const nowPlayingDisplay = document.getElementById('now-playing');
 
@@ -91,6 +92,19 @@ document.addEventListener('DOMContentLoaded', () => {
         audioPlayer.onended = playNextInSequence;
         playNextInSequence(); // Start the first track
     }
+
+    // Event listener for the cancel button
+    cancelButton.addEventListener('click', () => {
+        audioPlayer.pause();
+        audioPlayer.currentTime = 0; // Rewind to the beginning
+        audioPlayer.src = ''; // Clear the audio source
+        currentSequenceIndex = 0;
+        currentRepetition = 0;
+        audioFilesToPlay = [];
+        nowPlayingDisplay.textContent = ''; // Clear now playing display
+        audioPlayer.onended = null; // Remove the event listener
+        console.log('Playback cancelled.');
+    });
 
     // Event listener for the play button
     playButton.addEventListener('click', () => {
