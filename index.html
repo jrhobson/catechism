@@ -8,22 +8,22 @@
 </head>
 <body>
     <div class="container">
-        <h1>Interactive Audio Player</h1>
+        <h1>Catechism</h1>
 
         <div class="player">
             <audio id="audio-player" controls></audio>
             <div id="now-playing"></div>
+            <div id="audio-text-display"></div>
         </div>
 
         <div class="controls">
-            <label for="play-count">Play Count:</label>
+            <label for="play-count">Play Count: <span id="skip-button">skip</span></label>
             <input type="number" id="play-count" value="1" min="1">
-
             <button id="play-button">Play Selected Audio</button>
             <button id="cancel-button">Cancel Playback</button>
         </div>
 
-        <div id="audio-checkboxes">
+        <div id="audio-checkboxes" class="options">
             <!-- Checkboxes will be populated by JavaScript -->
         </div>
     </div>
